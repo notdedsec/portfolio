@@ -1,0 +1,100 @@
+#skills {
+  background-color: $bg-color;
+  color: $fg-color;
+  height: 100%;
+  border-top: 0px;
+  padding-bottom: 15rem;
+
+  @include respond(tab-land) {
+    height: 100%;
+    -webkit-clip-path: none;
+    clip-path: none;
+    padding-bottom: 2rem;
+  }
+
+  .skills-wrapper {
+    @include respond(phone) {
+      padding-bottom: 5rem;
+    }
+
+    .row {
+      margin-bottom: 8rem;
+      justify-content: center;
+      align-items: center;
+
+      @include respond(phone) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__image {
+      width: 90%;
+      margin: 0 auto;
+      background-color: $bg-color;
+      color: $fifth-color;
+
+      @include respond(tab-land) {
+        width: 100%;
+        margin: 0;
+      }
+
+      border: 4px solid $fifth-color;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      transition: all 0.2s ease-out;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+      transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+        0.5s box-shadow,
+        0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+
+      @include respond(phone) {
+        box-shadow: none;
+        margin-bottom: 3.2rem;
+      }
+    }
+
+    &__info {
+      color: $bg-color;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      flex-direction: column;
+      font-weight: bold;
+      margin-bottom: 3.8rem;
+
+      @include respond(phone) {
+        align-items: center;
+      }
+
+      &-text {
+        font-size: $mid-font-size;
+        text-align: center;
+
+        @include respond(tab-port) {
+          font-size: 2rem;
+          text-align: center;
+        }
+        @include respond(phone) {
+          font-size: 2rem;
+          text-align: center;
+        }
+
+        &--important {
+          background: darken($secondary-color, 1%);
+          display: inline-block;
+          font-style: italic;
+          padding: 0 0.3rem;
+          margin: 0.3rem 0;
+          line-height: 1.6;
+
+          @include respond(phone) {
+            display: inline;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+}
